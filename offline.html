@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>غير متصل - شركة ابداع الاسراء</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Cairo', 'Tajawal', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            direction: rtl;
+            text-align: center;
+        }
+        
+        .offline-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .offline-icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+        
+        .offline-title {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .offline-message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .offline-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .btn-primary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .company-info {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .language-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .language-toggle:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .en {
+            display: none;
+        }
+        
+        body[dir="ltr"] .ar {
+            display: none;
+        }
+        
+        body[dir="ltr"] .en {
+            display: block;
+        }
+        
+        body[dir="ltr"] {
+            direction: ltr;
+            text-align: center;
+        }
+        
+        body[dir="ltr"] .language-toggle {
+            right: auto;
+            left: 20px;
+        }
+        
+        @media (max-width: 568px) {
+            .offline-container {
+                padding: 2rem;
+            }
+            
+            .offline-icon {
+                font-size: 3rem;
+            }
+            
+            .offline-title {
+                font-size: 1.5rem;
+            }
+            
+            .offline-message {
+                font-size: 1rem;
+            }
+            
+            .offline-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <button class="language-toggle" onclick="toggleLanguage()">
+        <span class="ar">EN</span>
+        <span class="en">AR</span>
+    </button>
+    
+    <div class="offline-container">
+        <div class="offline-icon pulse">
+            <span class="ar">📱</span>
+            <span class="en">📱</span>
+        </div>
+        
+        <h1 class="offline-title">
+            <span class="ar">غير متصل بالإنترنت</span>
+            <span class="en">You're Offline</span>
+        </h1>
+        
+        <p class="offline-message">
+            <span class="ar">
+                يبدو أنك غير متصل بالإنترنت حالياً. يرجى التحقق من اتصالك بالإنترنت والمحاولة مرة أخرى.
+                <br><br>
+                يمكنك تصفح بعض المحتوى المحفوظ من زياراتك السابقة.
+            </span>
+            <span class="en">
+                It looks like you're currently offline. Please check your internet connection and try again.
+                <br><br>
+                You can browse some cached content from your previous visits.
+            </span>
+        </p>
+        
+        <div class="offline-actions">
+            <button class="btn btn-primary" onclick="retryConnection()">
+                <span class="ar">🔄 إعادة المحاولة</span>
+                <span class="en">🔄 Retry</span>
+            </button>
+            
+            <button class="btn btn-secondary" onclick="goBack()">
+                <span class="ar">↩️ العودة</span>
+                <span class="en">↩️ Go Back</span>
+            </button>
+        </div>
+        
+        <div class="company-info">
+            <p>
+                <span class="ar">
+                    <strong>شركة ابداع الاسراء</strong><br>
+                    لإنتاج جبس الذرة والبطاطا<br>
+                    📞 07731210823 | 07726102560<br>
+                    📍 جميلة الصناعية - شارع حسينية الأنصار
+                </span>
+                <span class="en">
+                    <strong>Al-Israa Creativity Co.</strong><br>
+                    Corn and Potato Snacks Production<br>
+                    📞 07731210823 | 07726102560<br>
+                    📍 Jamila Industrial - Husseiniya Al-Ansar Street
+                </span>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        let isRTL = true;
+        
+        function toggleLanguage() {
+            const body = document.body;
+            const html = document.documentElement;
+            
+            if (isRTL) {
+                // Switch to English
+                body.setAttribute('dir', 'ltr');
+                html.setAttribute('dir', 'ltr');
+                html.setAttribute('lang', 'en');
+                isRTL = false;
+            } else {
+                // Switch to Arabic
+                body.setAttribute('dir', 'rtl');
+                html.setAttribute('dir', 'rtl');
+                html.setAttribute('lang', 'ar');
+                isRTL = true;
+            }
+        }
+        
+        function retryConnection() {
+            // Show loading state
+            const retryBtn = document.querySelector('.btn-primary');
+            const originalText = retryBtn.innerHTML;
+            
+            retryBtn.innerHTML = isRTL ? '🔄 جاري التحقق...' : '🔄 Checking...';
+            retryBtn.disabled = true;
+            
+            // Try to reload the page
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000);
+        }
+        
+        function goBack() {
+            if (window.history.length > 1) {
+                window.history.back();
+            } else {
+                // If no history, try to go to home
+                window.location.href = '/';
+            }
+        }
+        
+        // Check for online/offline status
+        window.addEventListener('online', () => {
+            // User is back online
+            const title = document.querySelector('.offline-title');
+            const message = document.querySelector('.offline-message');
+            
+            if (isRTL) {
+                title.innerHTML = '<span class="ar">🎉 عاد الاتصال!</span>';
+                message.innerHTML = '<span class="ar">تم استعادة الاتصال بالإنترنت. سيتم إعادة تحميل الصفحة تلقائياً.</span>';
+            } else {
+                title.innerHTML = '<span class="en">🎉 Back Online!</span>';
+                message.innerHTML = '<span class="en">Internet connection restored. The page will reload automatically.</span>';
+            }
+            
+            // Reload after 2 seconds
+            setTimeout(() => {
+                window.location.reload();
+            }, 2000);
+        });
+        
+        window.addEventListener('offline', () => {
+            // User went offline again
+            console.log('User went offline');
+        });
+        
+        // Initialize language based on browser preference
+        document.addEventListener('DOMContentLoaded', () => {
+            const browserLanguage = navigator.language || navigator.userLanguage;
+            const savedLanguage = localStorage.getItem('language');
+            
+            if (savedLanguage === 'en' || (!savedLanguage && !browserLanguage.startsWith('ar'))) {
+                toggleLanguage();
+            }
+        });
+        
+        // Add some animation on load
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.offline-container');
+            container.style.opacity = '0';
+            container.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                container.style.transition = 'all 0.5s ease';
+                container.style.opacity = '1';
+                container.style.transform = 'translateY(0)';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
