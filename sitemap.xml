@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Main Page (Arabic) -->
+    <url>
+        <loc>https://yourdomainname.com/</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomainname.com/" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomainname.com/" />
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://yourdomainname.com/" />
+        <lastmod>2024-01-15T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        
+        <!-- Company Images -->
+        <image:image>
+            <image:loc>https://yourdomainname.com/images/corn-snacks.jpg</image:loc>
+            <image:title>جبس ذرة عالي الجودة - High Quality Corn Snacks</image:title>
+            <image:caption>منتجات جبس الذرة المقرمشة من شركة ابداع الاسراء</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://yourdomainname.com/images/potato-snacks.jpg</image:loc>
+            <image:title>جبس بطاطا مقرمش - Crispy Potato Snacks</image:title>
+            <image:caption>منتجات جبس البطاطا المقرمشة من شركة ابداع الاسراء</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Home Section -->
+    <url>
+        <loc>https://yourdomainname.com/#home</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomainname.com/#home" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomainname.com/#home" />
+        <lastmod>2024-01-15T00:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- About Section -->
+    <url>
+        <loc>https://yourdomainname.com/#about</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomainname.com/#about" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomainname.com/#about" />
+        <lastmod>2024-01-15T00:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Products Section -->
+    <url>
+        <loc>https://yourdomainname.com/#products</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomainname.com/#products" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomainname.com/#products" />
+        <lastmod>2024-01-15T00:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        
+        <!-- Product Images -->
+        <image:image>
+            <image:loc>https://yourdomainname.com/images/cheese-corn-snacks.jpg</image:loc>
+            <image:title>جبس ذرة بالجبنة - Cheese Corn Snacks</image:title>
+            <image:caption>جبس ذرة بطعم الجبنة الطبيعية المقرمشة</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://yourdomainname.com/images/spicy-potato-snacks.jpg</image:loc>
+            <image:title>جبس بطاطا حار - Spicy Potato Snacks</image:title>
+            <image:caption>جبس بطاطا بالنكهة الحارة المقرمشة</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://yourdomainname.com/images/taco-corn-snacks.jpg</image:loc>
+            <image:title>جبس ذرة تاكو - Taco Corn Snacks</image:title>
+            <image:caption>جبس ذرة بنكهة التاكو المميزة</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://yourdomainname.com/images/butter-corn-snacks.jpg</image:loc>
+            <image:title>جبس ذرة بالزبدة - Butter Corn Snacks</image:title>
+            <image:caption>جبس ذرة بطعم الزبدة الطبيعية</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://yourdomainname.com/images/classic-potato-snacks.jpg</image:loc>
+            <image:title>جبس بطاطا كلاسيك - Classic Potato Snacks</image:title>
+            <image:caption>جبس بطاطا بالطعم الكلاسيكي المحبوب</image:caption>
+        </image:image>
+        
+        <image:image>
+            <image:loc>https://yourdomainname.com/images/butter-popcorn.jpg</image:loc>
+            <image:title>فشار بالزبدة - Butter Popcorn</image:title>
+            <image:caption>فشار طازج بنكهة الزبدة الطبيعية</image:caption>
+        </image:image>
+    </url>
+    
+    <!-- Contact Section -->
+    <url>
+        <loc>https://yourdomainname.com/#contact</loc>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://yourdomainname.com/#contact" />
+        <xhtml:link rel="alternate" hreflang="en" href="https://yourdomainname.com/#contact" />
+        <lastmod>2024-01-15T00:00:00+00:00</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+</urlset>
+
+<!-- 
+Company Information:
+- Arabic Name: شركة ابداع الاسراء لانتاج جبس الذره و البطاطا
+- English Name: Al-Israa Creativity Co. for Corn and Potato Snacks Production
+- Location: جميلة الصناعية - شارع حسينية الأنصار
+- Phone: 07731210823, 07726102560
+- Business: Corn and potato snacks production
+-->
