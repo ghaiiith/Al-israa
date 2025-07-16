@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة ابداع الاسراء لانتاج جبس الذره و البطاطا</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts - Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-seedling me-2"></i>
+                <span class="ar">شركة ابداع الاسراء</span>
+                <span class="en d-none">Al-Israa Creativity Co.</span>
+            </a>
+            
+            <div class="d-flex align-items-center">
+                <!-- Language Toggle -->
+                <div class="language-toggle me-3">
+                    <button class="btn btn-outline-light btn-sm" onclick="toggleLanguage()">
+                        <i class="fas fa-language me-1"></i>
+                        <span class="ar">EN</span>
+                        <span class="en d-none">AR</span>
+                    </button>
+                </div>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">
+                            <span class="ar">الرئيسية</span>
+                            <span class="en d-none">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">
+                            <span class="ar">عن الشركة</span>
+                            <span class="en d-none">About</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">
+                            <span class="ar">المنتجات</span>
+                            <span class="en d-none">Products</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">
+                            <span class="ar">اتصل بنا</span>
+                            <span class="en d-none">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-slider">
+            <div class="slide active" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                <div class="container">
+                    <div class="row align-items-center min-vh-100">
+                        <div class="col-lg-6" data-aos="fade-right">
+                            <h1 class="display-4 fw-bold text-white mb-4">
+                                <span class="ar">شركة ابداع الاسراء</span>
+                                <span class="en d-none">Al-Israa Creativity Co.</span>
+                            </h1>
+                            <p class="lead text-white mb-4">
+                                <span class="ar">لإنتاج جبس الذرة والبطاطا عالي الجودة</span>
+                                <span class="en d-none">For High-Quality Corn and Potato Snacks Production</span>
+                            </p>
+                            <a href="#products" class="btn btn-warning btn-lg">
+                                <span class="ar">تصفح المنتجات</span>
+                                <span class="en d-none">Browse Products</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <div class="hero-image">
+                                <img src="https://via.placeholder.com/500x400?text=جبس+ذرة+عالي+الجودة" alt="Corn Snacks" class="img-fluid rounded shadow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="slide" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                <div class="container">
+                    <div class="row align-items-center min-vh-100">
+                        <div class="col-lg-6" data-aos="fade-right">
+                            <h1 class="display-4 fw-bold text-white mb-4">
+                                <span class="ar">جودة عالية وطعم مميز</span>
+                                <span class="en d-none">High Quality & Unique Taste</span>
+                            </h1>
+                            <p class="lead text-white mb-4">
+                                <span class="ar">نقدم أفضل أنواع جبس الذرة والبطاطا المقرمشة</span>
+                                <span class="en d-none">We offer the finest crispy corn and potato snacks</span>
+                            </p>
+                            <a href="#about" class="btn btn-info btn-lg">
+                                <span class="ar">المزيد عنا</span>
+                                <span class="en d-none">Learn More</span>
+                            </a>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <div class="hero-image">
+                                <img src="https://via.placeholder.com/500x400?text=جبس+بطاطا+مقرمش" alt="Potato Snacks" class="img-fluid rounded shadow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Hero Navigation -->
+        <div class="hero-nav">
+            <button class="prev" onclick="changeSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+            <button class="next" onclick="changeSlide(1)"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold">
+                        <span class="ar">عن الشركة</span>
+                        <span class="en d-none">About Company</span>
+                    </h2>
+                    <div class="divider mx-auto"></div>
+                </div>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4" data-aos="fade-right">
+                    <div class="about-content">
+                        <h3 class="fw-bold mb-3">
+                            <span class="ar">شركة ابداع الاسراء لانتاج جبس الذره و البطاطا</span>
+                            <span class="en d-none">Al-Israa Creativity Co. for Corn and Potato Snacks Production</span>
+                        </h3>
+                        <p class="text-muted mb-4">
+                            <span class="ar">نحن شركة متخصصة في إنتاج أفضل أنواع جبس الذرة والبطاطا المقرمشة. نلتزم بأعلى معايير الجودة والطعم المميز لنقدم لعملائنا منتجات لذيذة وصحية.</span>
+                            <span class="en d-none">We are a specialized company in producing the finest crispy corn and potato snacks. We are committed to the highest quality standards and unique taste to provide our customers with delicious and healthy products.</span>
+                        </p>
+                        
+                        <div class="features mb-4">
+                            <div class="feature-item mb-3">
+                                <i class="fas fa-check-circle text-success me-3"></i>
+                                <span class="ar">جودة عالية ومواد طبيعية</span>
+                                <span class="en d-none">High quality and natural ingredients</span>
+                            </div>
+                            <div class="feature-item mb-3">
+                                <i class="fas fa-check-circle text-success me-3"></i>
+                                <span class="ar">تكنولوجيا إنتاج حديثة</span>
+                                <span class="en d-none">Modern production technology</span>
+                            </div>
+                            <div class="feature-item mb-3">
+                                <i class="fas fa-check-circle text-success me-3"></i>
+                                <span class="ar">طعم مميز ومقرمش</span>
+                                <span class="en d-none">Unique and crispy taste</span>
+                            </div>
+                        </div>
+                        
+                        <div class="location-info">
+                            <h4 class="fw-bold mb-3">
+                                <span class="ar">موقع المصنع</span>
+                                <span class="en d-none">Factory Location</span>
+                            </h4>
+                            <p class="text-muted">
+                                <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                                <span class="ar">جميلة الصناعية - شارع حسينية الأنصار</span>
+                                <span class="en d-none">Jamila Industrial - Husseiniya Al-Ansar Street</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6 mb-4" data-aos="fade-left">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d833.0076233743466!2d44.427131881424934!3d33.370269926216665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2LTYsdmD2Kkg2KfYqNiv2KfYuSDYp9mE2KfYs9ix2KfYoQ!5e0!3m2!1sar!2siq!4v1752617968286!5m2!1sar!2siq" 
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold">
+                        <span class="ar">منتجاتنا</span>
+                        <span class="en d-none">Our Products</span>
+                    </h2>
+                    <div class="divider mx-auto"></div>
+                    <p class="text-muted mt-3">
+                        <span class="ar">تشكيلة متنوعة من جبس الذرة والبطاطا المقرمشة بنكهات مختلفة</span>
+                        <span class="en d-none">A diverse range of crispy corn and potato snacks with different flavors</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="product-slider" data-aos="fade-up">
+                        <div class="product-slide active">
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/400x400?text=جبس+ذرة+بالجبنة" alt="Cheese Corn Snacks">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>
+                                                <span class="ar">جبس ذرة بالجبنة</span>
+                                                <span class="en d-none">Cheese Corn Snacks</span>
+                                            </h4>
+                                            <p class="text-muted">
+                                                <span class="ar">مقرمش ولذيذ بطعم الجبنة الطبيعية</span>
+                                                <span class="en d-none">Crispy and delicious with natural cheese flavor</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4 mb-4">
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/400x400?text=جبس+بطاطا+حار" alt="Spicy Potato Snacks">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>
+                                                <span class="ar">جبس بطاطا حار</span>
+                                                <span class="en d-none">Spicy Potato Snacks</span>
+                                            </h4>
+                                            <p class="text-muted">
+                                                <span class="ar">نكهة حارة ومقرمشة من البطاطا الطبيعية</span>
+                                                <span class="en d-none">Spicy and crispy flavor from natural potatoes</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4 mb-4">
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/400x400?text=جبس+ذرة+تاكو" alt="Taco Corn Snacks">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>
+                                                <span class="ar">جبس ذرة تاكو</span>
+                                                <span class="en d-none">Taco Corn Snacks</span>
+                                            </h4>
+                                            <p class="text-muted">
+                                                <span class="ar">نكهة تاكو مميزة ومقرمشة</span>
+                                                <span class="en d-none">Unique and crispy taco flavor</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="product-slide">
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/400x400?text=جبس+ذرة+بالزبدة" alt="Butter Corn Snacks">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>
+                                                <span class="ar">جبس ذرة بالزبدة</span>
+                                                <span class="en d-none">Butter Corn Snacks</span>
+                                            </h4>
+                                            <p class="text-muted">
+                                                <span class="ar">طعم الزبدة الطبيعية المقرمشة</span>
+                                                <span class="en d-none">Natural crispy butter flavor</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4 mb-4">
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/400x400?text=جبس+بطاطا+كلاسيك" alt="Classic Potato Snacks">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>
+                                                <span class="ar">جبس بطاطا كلاسيك</span>
+                                                <span class="en d-none">Classic Potato Snacks</span>
+                                            </h4>
+                                            <p class="text-muted">
+                                                <span class="ar">الطعم الكلاسيكي المحبوب للبطاطا</span>
+                                                <span class="en d-none">The beloved classic potato flavor</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-md-4 mb-4">
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="https://via.placeholder.com/400x400?text=فشار+بالزبدة" alt="Butter Popcorn">
+                                        </div>
+                                        <div class="product-info">
+                                            <h4>
+                                                <span class="ar">فشار بالزبدة</span>
+                                                <span class="en d-none">Butter Popcorn</span>
+                                            </h4>
+                                            <p class="text-muted">
+                                                <span class="ar">فشار طازج بنكهة الزبدة الطبيعية</span>
+                                                <span class="en d-none">Fresh popcorn with natural butter flavor</span>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Navigation -->
+                    <div class="product-nav text-center mt-4">
+                        <button class="btn btn-outline-primary me-2" onclick="changeProductSlide(-1)">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="btn btn-outline-primary" onclick="changeProductSlide(1)">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold">
+                        <span class="ar">اتصل بنا</span>
+                        <span class="en d-none">Contact Us</span>
+                    </h2>
+                    <div class="divider mx-auto"></div>
+                    <p class="text-muted mt-3">
+                        <span class="ar">نحن هنا لخدمتكم في أي وقت</span>
+                        <span class="en d-none">We are here to serve you anytime</span>
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-md-6 mb-4" data-aos="fade-right">
+                            <div class="contact-card text-center">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h4>
+                                    <span class="ar">الهاتف</span>
+                                    <span class="en d-none">Phone</span>
+                                </h4>
+                                <p class="text-muted">
+                                    <a href="tel:07731210823" class="text-decoration-none">07731210823</a><br>
+                                    <a href="tel:07726102560" class="text-decoration-none">07726102560</a>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6 mb-4" data-aos="fade-left">
+                            <div class="contact-card text-center">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h4>
+                                    <span class="ar">الموقع</span>
+                                    <span class="en d-none">Location</span>
+                                </h4>
+                                <p class="text-muted">
+                                    <span class="ar">جميلة الصناعية - شارع حسينية الأنصار</span>
+                                    <span class="en d-none">Jamila Industrial - Husseiniya Al-Ansar Street</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Media -->
+            <div class="row mt-5">
+                <div class="col-lg-12 text-center" data-aos="fade-up">
+                    <h4 class="mb-3">
+                        <span class="ar">تابعنا على</span>
+                        <span class="en d-none">Follow Us</span>
+                    </h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p class="mb-0">
+                        <span class="ar">© 2024 شركة ابداع الاسراء. جميع الحقوق محفوظة.</span>
+                        <span class="en d-none">© 2024 Al-Israa Creativity Co. All rights reserved.</span>
+                    </p>
+                </div>
+                <div class="col-lg-6 text-end">
+                    <p class="mb-0">
+                        <span class="ar">صنع بـ</span>
+                        <span class="en d-none">Made with</span>
+                        <i class="fas fa-heart text-danger mx-1"></i>
+                        <span class="ar">في العراق</span>
+                        <span class="en d-none">in Iraq</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
